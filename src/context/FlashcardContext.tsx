@@ -1,5 +1,8 @@
+
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { categories, flashcards, Category, Flashcard } from "../data/flashcards";
+import { Category, Flashcard } from "../data/flashcards";
+import categoriesData from "../data/categories.json";
+import flashcardsData from "../data/flashcards.json";
 
 type FlashcardContextType = {
   categories: Category[];
@@ -28,10 +31,12 @@ type FlashcardContextType = {
 const FlashcardContext = createContext<FlashcardContextType | undefined>(undefined);
 
 export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Cast imported JSON data to the correct types
+  const categories = categoriesData as Category[];
+  const [modifiedFlashcards, setModifiedFlashcards] = useState<Flashcard[]>(flashcardsData as Flashcard[]);
   const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [modifiedFlashcards, setModifiedFlashcards] = useState<Flashcard[]>(flashcards);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedCardCount, setSelectedCardCount] = useState(10);
   const [hasStartedReview, setHasStartedReview] = useState(false);

@@ -1,0 +1,38 @@
+
+[
+  {
+    "id": "arithmetic",
+    "name": "Arithmetic",
+    "icon": "calculator",
+    "description": "Fractions, percentages, ratios, and other number properties",
+    "color": "from-blue-500 to-cyan-400"
+  },
+  {
+    "id": "algebra",
+    "name": "Algebra",
+    "icon": "sigma",
+    "description": "Equations, inequalities, exponents, and functions",
+    "color": "from-purple-500 to-indigo-400"
+  },
+  {
+    "id": "geometry",
+    "name": "Geometry",
+    "icon": "triangle",
+    "description": "Triangles, circles, coordinate geometry, and spatial reasoning",
+    "color": "from-green-500 to-emerald-400"
+  },
+  {
+    "id": "word-problems",
+    "name": "Word Problems",
+    "icon": "book-open",
+    "description": "Rate, work, probability, and quantitative reasoning",
+    "color": "from-amber-500 to-yellow-400"
+  },
+  {
+    "id": "data-sufficiency",
+    "name": "Data Sufficiency",
+    "icon": "bar-chart",
+    "description": "Specialized tips and strategies for data sufficiency questions",
+    "color": "from-rose-500 to-pink-400"
+  }
+]
