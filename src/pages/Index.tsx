@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "../components/Navbar";
 import CategorySelector from "../components/CategorySelector";
@@ -6,7 +5,6 @@ import Flashcard from "../components/Flashcard";
 import FlashcardControls from "../components/FlashcardControls";
 import ProgressBar from "../components/ProgressBar";
 import CardCountSelector from "../components/CardCountSelector";
-import AddFlashcardForm from "../components/AddFlashcardForm";
 import { FlashcardProvider, useFlashcards } from "../context/FlashcardContext";
 
 const FlashcardSection: React.FC = () => {
@@ -52,7 +50,6 @@ const Index: React.FC = () => {
         <main className="flex-grow">
           <CategorySelector />
           <FlashcardSection />
-          <AddFlashcardForm />
         </main>
         <footer className="py-6 border-t">
           <div className="max-w-screen-xl mx-auto px-4 text-center">

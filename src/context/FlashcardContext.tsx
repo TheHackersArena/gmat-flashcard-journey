@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { categories, flashcards, Category, Flashcard } from "../data/flashcards";
 
@@ -24,7 +23,6 @@ type FlashcardContextType = {
   hasStartedReview: boolean;
   startReview: () => void;
   resetReview: () => void;
-  addFlashcard: (flashcard: Flashcard) => void;
 };
 
 const FlashcardContext = createContext<FlashcardContextType | undefined>(undefined);
@@ -35,26 +33,22 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [isFlipped, setIsFlipped] = useState(false);
   const [modifiedFlashcards, setModifiedFlashcards] = useState<Flashcard[]>(flashcards);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [selectedCardCount, setSelectedCardCount] = useState(10); // Default to 10 cards
+  const [selectedCardCount, setSelectedCardCount] = useState(10);
   const [hasStartedReview, setHasStartedReview] = useState(false);
 
-  // Get all flashcards for the current category
   const allCategoryFlashcards = currentCategory
     ? modifiedFlashcards.filter(card => card.categoryId === currentCategory.id)
     : modifiedFlashcards;
 
-  // Get limited number of flashcards based on user selection
   const filteredFlashcards = hasStartedReview 
     ? allCategoryFlashcards.slice(0, selectedCardCount)
     : allCategoryFlashcards;
 
-  // Calculate progress
   const progress = 
     filteredFlashcards.length > 0 && hasStartedReview
       ? ((currentCardIndex + 1) / filteredFlashcards.length) * 100 
       : 0;
 
-  // Set a reasonable default for selectedCardCount based on available cards
   useEffect(() => {
     if (allCategoryFlashcards.length > 0) {
       const availableCounts = [5, 10, 20, 50, 100].filter(count => count <= allCategoryFlashcards.length);
@@ -63,21 +57,18 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     }
   }, [currentCategory, allCategoryFlashcards.length]);
 
-  // Start the review session
   const startReview = () => {
     setHasStartedReview(true);
     setCurrentCardIndex(0);
     setIsFlipped(false);
   };
 
-  // Reset the review session
   const resetReview = () => {
     setHasStartedReview(false);
     setCurrentCardIndex(0);
     setIsFlipped(false);
   };
 
-  // Navigation functions
   const goToNextCard = () => {
     if (currentCardIndex < filteredFlashcards.length - 1) {
       setIsFlipped(false);
@@ -96,12 +87,6 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     }
   };
 
-  // Add new flashcard
-  const addFlashcard = (flashcard: Flashcard) => {
-    setModifiedFlashcards(prevCards => [...prevCards, flashcard]);
-  };
-
-  // Toggle bookmark
   const toggleBookmark = (id: string) => {
     const updatedFlashcards = modifiedFlashcards.map(card => 
       card.id === id ? { ...card, isBookmarked: !card.isBookmarked } : card
@@ -109,11 +94,9 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setModifiedFlashcards(updatedFlashcards);
   };
 
-  // Shuffle cards
   const shuffleCards = () => {
     const shuffled = [...filteredFlashcards].sort(() => Math.random() - 0.5);
     setModifiedFlashcards(prevCards => {
-      // Only shuffle the current category cards
       const otherCards = prevCards.filter(card => 
         !filteredFlashcards.some(filtered => filtered.id === card.id)
       );
@@ -123,19 +106,16 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setIsFlipped(false);
   };
 
-  // Reset when category changes
   useEffect(() => {
     setHasStartedReview(false);
     setCurrentCardIndex(0);
     setIsFlipped(false);
   }, [currentCategory]);
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  // Apply dark mode class to document
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -165,8 +145,7 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setSelectedCardCount,
     hasStartedReview,
     startReview,
-    resetReview,
-    addFlashcard
+    resetReview
   };
 
   return (
