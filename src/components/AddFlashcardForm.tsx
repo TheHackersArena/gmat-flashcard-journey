@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import { Plus, X } from "lucide-react";
 import { useFlashcards } from "../context/FlashcardContext";
 
 const AddFlashcardForm: React.FC = () => {
-  const { addFlashcard, currentCategory, categories } = useFlashcards();
+  const { currentCategory, categories } = useFlashcards();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [front, setFront] = useState("");
   const [back, setBack] = useState("");
@@ -12,15 +11,7 @@ const AddFlashcardForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!front.trim() || !back.trim() || !categoryId) return;
-    
-    addFlashcard({
-      id: `custom-${Date.now()}`,
-      categoryId,
-      front: front.trim(),
-      back: back.trim(),
-      isBookmarked: false
-    });
+    alert("Adding flashcards through the UI is disabled. Please modify the data files directly.");
     
     // Reset form
     setFront("");
