@@ -21,6 +21,14 @@ const CardCountSelector: React.FC = () => {
   const totalAvailableCards = filteredFlashcards.length;
   const maxAllowed = Math.min(totalAvailableCards, 200);
   
+  // Get available count options based on total cards
+  const availableCountOptions = countOptions.filter(count => count <= totalAvailableCards);
+  
+  // If no standard options are available, create a custom option with the total cards
+  const displayOptions = availableCountOptions.length > 0 
+    ? availableCountOptions 
+    : [totalAvailableCards];
+  
   if (!currentCategory) {
     return null;
   }
@@ -53,10 +61,10 @@ const CardCountSelector: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-5 gap-2 mb-4">
-          {countOptions.map(count => (
+          {displayOptions.map(count => (
             <button
               key={count}
-              onClick={() => setSelectedCardCount(Math.min(count, maxAllowed))}
+              onClick={() => setSelectedCardCount(count)}
               className={`py-2 rounded-md text-sm font-medium transition-all ${
                 selectedCardCount === count
                   ? "bg-primary text-primary-foreground"

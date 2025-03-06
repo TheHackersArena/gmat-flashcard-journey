@@ -6,6 +6,7 @@ import Flashcard from "../components/Flashcard";
 import FlashcardControls from "../components/FlashcardControls";
 import ProgressBar from "../components/ProgressBar";
 import CardCountSelector from "../components/CardCountSelector";
+import AddFlashcardForm from "../components/AddFlashcardForm";
 import { FlashcardProvider, useFlashcards } from "../context/FlashcardContext";
 
 const FlashcardSection: React.FC = () => {
@@ -23,7 +24,7 @@ const FlashcardSection: React.FC = () => {
     return (
       <div className="text-center p-8">
         <h3 className="text-xl font-medium">No flashcards available</h3>
-        <p className="text-muted-foreground mt-2">Try selecting a different category</p>
+        <p className="text-muted-foreground mt-2">Try selecting a different category or add new flashcards</p>
       </div>
     );
   }
@@ -51,6 +52,7 @@ const Index: React.FC = () => {
         <main className="flex-grow">
           <CategorySelector />
           <FlashcardSection />
+          <AddFlashcardForm />
         </main>
         <footer className="py-6 border-t">
           <div className="max-w-screen-xl mx-auto px-4 text-center">

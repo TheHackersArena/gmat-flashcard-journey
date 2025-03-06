@@ -24,6 +24,7 @@ type FlashcardContextType = {
   hasStartedReview: boolean;
   startReview: () => void;
   resetReview: () => void;
+  addFlashcard: (flashcard: Flashcard) => void;
 };
 
 const FlashcardContext = createContext<FlashcardContextType | undefined>(undefined);
@@ -52,6 +53,15 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     filteredFlashcards.length > 0 && hasStartedReview
       ? ((currentCardIndex + 1) / filteredFlashcards.length) * 100 
       : 0;
+
+  // Set a reasonable default for selectedCardCount based on available cards
+  useEffect(() => {
+    if (allCategoryFlashcards.length > 0) {
+      const availableCounts = [5, 10, 20, 50, 100].filter(count => count <= allCategoryFlashcards.length);
+      const defaultCount = availableCounts.length > 0 ? availableCounts[0] : Math.min(allCategoryFlashcards.length, 5);
+      setSelectedCardCount(defaultCount);
+    }
+  }, [currentCategory, allCategoryFlashcards.length]);
 
   // Start the review session
   const startReview = () => {
@@ -84,6 +94,11 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         setCurrentCardIndex(currentCardIndex - 1);
       }, 200);
     }
+  };
+
+  // Add new flashcard
+  const addFlashcard = (flashcard: Flashcard) => {
+    setModifiedFlashcards(prevCards => [...prevCards, flashcard]);
   };
 
   // Toggle bookmark
@@ -150,7 +165,8 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setSelectedCardCount,
     hasStartedReview,
     startReview,
-    resetReview
+    resetReview,
+    addFlashcard
   };
 
   return (
