@@ -19,6 +19,11 @@ type FlashcardContextType = {
   progress: number;
   isDarkMode: boolean;
   toggleDarkMode: () => void;
+  selectedCardCount: number;
+  setSelectedCardCount: (count: number) => void;
+  hasStartedReview: boolean;
+  startReview: () => void;
+  resetReview: () => void;
 };
 
 const FlashcardContext = createContext<FlashcardContextType | undefined>(undefined);
@@ -29,17 +34,38 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [isFlipped, setIsFlipped] = useState(false);
   const [modifiedFlashcards, setModifiedFlashcards] = useState<Flashcard[]>(flashcards);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [selectedCardCount, setSelectedCardCount] = useState(10); // Default to 10 cards
+  const [hasStartedReview, setHasStartedReview] = useState(false);
 
-  // Get filtered flashcards based on selected category
-  const filteredFlashcards = currentCategory
+  // Get all flashcards for the current category
+  const allCategoryFlashcards = currentCategory
     ? modifiedFlashcards.filter(card => card.categoryId === currentCategory.id)
     : modifiedFlashcards;
 
+  // Get limited number of flashcards based on user selection
+  const filteredFlashcards = hasStartedReview 
+    ? allCategoryFlashcards.slice(0, selectedCardCount)
+    : allCategoryFlashcards;
+
   // Calculate progress
   const progress = 
-    filteredFlashcards.length > 0 
+    filteredFlashcards.length > 0 && hasStartedReview
       ? ((currentCardIndex + 1) / filteredFlashcards.length) * 100 
       : 0;
+
+  // Start the review session
+  const startReview = () => {
+    setHasStartedReview(true);
+    setCurrentCardIndex(0);
+    setIsFlipped(false);
+  };
+
+  // Reset the review session
+  const resetReview = () => {
+    setHasStartedReview(false);
+    setCurrentCardIndex(0);
+    setIsFlipped(false);
+  };
 
   // Navigation functions
   const goToNextCard = () => {
@@ -82,6 +108,13 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setIsFlipped(false);
   };
 
+  // Reset when category changes
+  useEffect(() => {
+    setHasStartedReview(false);
+    setCurrentCardIndex(0);
+    setIsFlipped(false);
+  }, [currentCategory]);
+
   // Toggle dark mode
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -112,7 +145,12 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     shuffleCards,
     progress,
     isDarkMode,
-    toggleDarkMode
+    toggleDarkMode,
+    selectedCardCount,
+    setSelectedCardCount,
+    hasStartedReview,
+    startReview,
+    resetReview
   };
 
   return (

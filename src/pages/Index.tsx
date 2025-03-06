@@ -5,10 +5,15 @@ import CategorySelector from "../components/CategorySelector";
 import Flashcard from "../components/Flashcard";
 import FlashcardControls from "../components/FlashcardControls";
 import ProgressBar from "../components/ProgressBar";
+import CardCountSelector from "../components/CardCountSelector";
 import { FlashcardProvider, useFlashcards } from "../context/FlashcardContext";
 
 const FlashcardSection: React.FC = () => {
-  const { currentCategory, filteredFlashcards } = useFlashcards();
+  const { 
+    currentCategory,
+    filteredFlashcards,
+    hasStartedReview
+  } = useFlashcards();
   
   if (!currentCategory) {
     return null;
@@ -25,9 +30,15 @@ const FlashcardSection: React.FC = () => {
   
   return (
     <div className="animate-fade-in">
-      <ProgressBar />
-      <Flashcard />
-      <FlashcardControls />
+      <CardCountSelector />
+      
+      {hasStartedReview && (
+        <>
+          <ProgressBar />
+          <Flashcard />
+          <FlashcardControls />
+        </>
+      )}
     </div>
   );
 };
