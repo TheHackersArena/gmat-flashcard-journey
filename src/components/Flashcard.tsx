@@ -73,7 +73,7 @@ const Flashcard: React.FC = () => {
             </div>
             
             <div className="flex-grow flex items-center justify-center">
-              <h3 className="text-2xl font-medium text-center leading-relaxed">
+              <h3 className="text-2xl font-medium text-center leading-relaxed text-foreground">
                 {currentCard.front}
               </h3>
             </div>
@@ -106,7 +106,7 @@ const Flashcard: React.FC = () => {
             <div className="flex-grow overflow-y-auto">
               <div className="prose max-w-none dark:prose-invert">
                 {currentCard.back.split('\n').map((paragraph, index) => (
-                  <p key={index} className="text-base leading-relaxed whitespace-pre-wrap">
+                  <p key={index} className="text-base leading-relaxed whitespace-pre-wrap text-foreground">
                     {paragraph}
                   </p>
                 ))}

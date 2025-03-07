@@ -22,6 +22,90 @@
     "isBookmarked": true
   },
   {
+    "id": "arith-4",
+    "categoryId": "arithmetic",
+    "front": "What is the formula for compound interest?",
+    "back": "A = P(1 + r/n)^(nt)\n\nWhere:\nA = final amount\nP = principal (initial investment)\nr = annual interest rate (decimal)\nn = number of times interest is compounded per year\nt = time in years",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-5",
+    "categoryId": "arithmetic",
+    "front": "How do you convert a decimal to a percentage?",
+    "back": "Multiply the decimal by 100 and add a % symbol.\n\nExample: 0.75 = 0.75 × 100% = 75%",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-6",
+    "categoryId": "arithmetic",
+    "front": "What is the rule for dividing fractions?",
+    "back": "To divide by a fraction, multiply by its reciprocal (flip the numerator and denominator).\n\nExample: (2/3) ÷ (1/4) = (2/3) × (4/1) = 8/3",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-7",
+    "categoryId": "arithmetic",
+    "front": "How do you calculate the mean (average) of a set of numbers?",
+    "back": "Add all the values in the set, then divide by the number of values.\n\nMean = (sum of all values) / (number of values)",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-8",
+    "categoryId": "arithmetic",
+    "front": "What is the formula for calculating median?",
+    "back": "1. Arrange all values in ascending order\n2. If there is an odd number of values, the median is the middle value\n3. If there is an even number of values, the median is the average of the two middle values",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-9",
+    "categoryId": "arithmetic",
+    "front": "How do you calculate the mode of a dataset?",
+    "back": "The mode is the value that appears most frequently in the dataset. A dataset can have multiple modes if several values appear with equal highest frequency, or no mode if all values appear with equal frequency.",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-10",
+    "categoryId": "arithmetic",
+    "front": "What is the formula for calculating variance?",
+    "back": "Variance = (Sum of squared differences from the mean) / (number of values)\n\nσ² = Σ(x - μ)² / N\n\nWhere:\nσ² = variance\nx = each value\nμ = mean\nN = number of values",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-11",
+    "categoryId": "arithmetic",
+    "front": "How do you calculate the standard deviation?",
+    "back": "Standard deviation is the square root of the variance.\n\nσ = √[(Σ(x - μ)²) / N]\n\nWhere:\nσ = standard deviation\nx = each value\nμ = mean\nN = number of values",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-12",
+    "categoryId": "arithmetic",
+    "front": "What is the formula for calculating the area of a circle?",
+    "back": "Area = πr²\n\nWhere r is the radius of the circle and π (pi) is approximately 3.14159",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-13",
+    "categoryId": "arithmetic",
+    "front": "How do you calculate the perimeter of a rectangle?",
+    "back": "Perimeter = 2(length + width)\n\nWhere length and width are the dimensions of the rectangle",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-14",
+    "categoryId": "arithmetic",
+    "front": "What is the formula for converting between Celsius and Fahrenheit?",
+    "back": "Fahrenheit to Celsius: C = (F - 32) × 5/9\nCelsius to Fahrenheit: F = (C × 9/5) + 32\n\nWhere C is the temperature in Celsius and F is the temperature in Fahrenheit",
+    "isBookmarked": false
+  },
+  {
+    "id": "arith-15",
+    "categoryId": "arithmetic",
+    "front": "How do you calculate the greatest common divisor (GCD) of two numbers?",
+    "back": "Method 1: Find all factors of both numbers and identify the largest common factor.\n\nMethod 2: Use the Euclidean algorithm:\n1. Divide the larger number by the smaller number\n2. Replace the larger number with the smaller number and the smaller number with the remainder\n3. Repeat until the remainder is 0\n4. The last non-zero remainder is the GCD",
+    "isBookmarked": false
+  },
+  {
     "id": "alg-1",
     "categoryId": "algebra",
     "front": "How do you solve a quadratic equation?",
@@ -40,6 +124,90 @@
     "categoryId": "algebra",
     "front": "How do you solve a system of linear equations?",
     "back": "Methods:\n1. Substitution: Solve for one variable in terms of others, then substitute\n2. Elimination: Add or subtract equations to eliminate a variable\n3. Matrix methods: Use Gaussian elimination or Cramer's rule\n4. Graphing: Find the intersection point of the lines",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-4",
+    "categoryId": "algebra",
+    "front": "What is the difference between a function and a relation?",
+    "back": "A relation is any set of ordered pairs (x, y).\n\nA function is a special type of relation where each input (x) has exactly one output (y). In other words, no two ordered pairs have the same x-value but different y-values.",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-5",
+    "categoryId": "algebra",
+    "front": "What is the domain and range of a function?",
+    "back": "Domain: The set of all possible input values (x) for which the function is defined.\n\nRange: The set of all possible output values (y) that can be produced by the function.",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-6",
+    "categoryId": "algebra",
+    "front": "How do you find the inverse of a function?",
+    "back": "1. Replace f(x) with y\n2. Swap x and y\n3. Solve for y\n4. Replace y with f^(-1)(x)\n\nCheck: f(f^(-1)(x)) = x and f^(-1)(f(x)) = x",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-7",
+    "categoryId": "algebra",
+    "front": "What are the properties of logarithms?",
+    "back": "• log_b(xy) = log_b(x) + log_b(y)\n• log_b(x/y) = log_b(x) - log_b(y)\n• log_b(x^n) = n log_b(x)\n• log_b(b) = 1\n• log_b(1) = 0\n• b^(log_b(x)) = x\n• log_b(x) = log_c(x) / log_c(b)",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-8",
+    "categoryId": "algebra",
+    "front": "What is the difference between a polynomial and a rational expression?",
+    "back": "Polynomial: An expression containing variables, coefficients, and the operations of addition, subtraction, multiplication, and non-negative integer exponents (e.g., 3x^2 + 2x - 5).\n\nRational expression: A fraction where both numerator and denominator are polynomials (e.g., (x^2 - 1)/(x + 3)).",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-9",
+    "categoryId": "algebra",
+    "front": "What is the binomial theorem?",
+    "back": "(x + y)^n = Σ(k=0 to n) (n choose k) x^(n-k) y^k\n\nWhere (n choose k) = n! / [k! × (n-k)!]",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-10",
+    "categoryId": "algebra",
+    "front": "How do you factor the difference of squares?",
+    "back": "a² - b² = (a + b)(a - b)",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-11",
+    "categoryId": "algebra",
+    "front": "How do you factor the sum and difference of cubes?",
+    "back": "a³ + b³ = (a + b)(a² - ab + b²)\na³ - b³ = (a - b)(a² + ab + b²)",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-12",
+    "categoryId": "algebra",
+    "front": "What is the formula for an arithmetic sequence?",
+    "back": "nth term: a_n = a_1 + (n - 1)d\n\nSum of n terms: S_n = n/2 × [2a_1 + (n - 1)d] = n/2 × (a_1 + a_n)\n\nWhere a_1 is the first term, d is the common difference, n is the number of terms, and a_n is the nth term.",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-13",
+    "categoryId": "algebra",
+    "front": "What is the formula for a geometric sequence?",
+    "back": "nth term: a_n = a_1 × r^(n-1)\n\nSum of n terms: S_n = a_1 × (1 - r^n) / (1 - r), for r ≠ 1\n\nSum of infinite terms (for |r| < 1): S_∞ = a_1 / (1 - r)\n\nWhere a_1 is the first term, r is the common ratio, and n is the number of terms.",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-14",
+    "categoryId": "algebra",
+    "front": "What is a matrix and how are basic matrix operations performed?",
+    "back": "A matrix is a rectangular array of numbers arranged in rows and columns.\n\nAddition: Add corresponding elements.\nScalar multiplication: Multiply each element by the scalar.\nMatrix multiplication: The (i,j) element of AB is the dot product of the ith row of A and the jth column of B.\nTranspose: Flip the matrix over its diagonal, switching rows and columns.",
+    "isBookmarked": false
+  },
+  {
+    "id": "alg-15",
+    "categoryId": "algebra",
+    "front": "What is the discriminant and what does it tell us about the solutions of a quadratic equation?",
+    "back": "The discriminant is the expression b² - 4ac in the quadratic formula for ax² + bx + c = 0.\n\nIf b² - 4ac > 0: The equation has two distinct real solutions.\nIf b² - 4ac = 0: The equation has one repeated real solution (a double root).\nIf b² - 4ac < 0: The equation has two complex conjugate solutions (no real solutions).",
     "isBookmarked": false
   },
   {
@@ -64,6 +232,90 @@
     "isBookmarked": false
   },
   {
+    "id": "geo-4",
+    "categoryId": "geometry",
+    "front": "What is the distance formula in coordinate geometry?",
+    "back": "Distance between points (x₁, y₁) and (x₂, y₂):\n\nd = √[(x₂ - x₁)² + (y₂ - y₁)²]",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-5",
+    "categoryId": "geometry",
+    "front": "What is the midpoint formula?",
+    "back": "The midpoint of a line segment with endpoints (x₁, y₁) and (x₂, y₂) is:\n\nM = ((x₁ + x₂)/2, (y₁ + y₂)/2)",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-6",
+    "categoryId": "geometry",
+    "front": "What are the volume formulas for common 3D shapes?",
+    "back": "• Cube: V = s³, where s is the side length\n• Rectangular prism: V = length × width × height\n• Sphere: V = (4/3)πr³, where r is the radius\n• Cylinder: V = πr²h, where r is the radius and h is the height\n• Cone: V = (1/3)πr²h, where r is the radius and h is the height\n• Pyramid: V = (1/3)Bh, where B is the area of the base and h is the height",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-7",
+    "categoryId": "geometry",
+    "front": "What is the slope formula?",
+    "back": "The slope of a line passing through points (x₁, y₁) and (x₂, y₂) is:\n\nm = (y₂ - y₁) / (x₂ - x₁), where x₂ ≠ x₁",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-8",
+    "categoryId": "geometry",
+    "front": "What is the point-slope form of a line equation?",
+    "back": "The point-slope form of a line with slope m passing through point (x₁, y₁) is:\n\ny - y₁ = m(x - x₁)",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-9",
+    "categoryId": "geometry",
+    "front": "What is the slope-intercept form of a line equation?",
+    "back": "The slope-intercept form of a line with slope m and y-intercept b is:\n\ny = mx + b",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-10",
+    "categoryId": "geometry",
+    "front": "What is the standard form of a line equation?",
+    "back": "The standard form of a line equation is:\n\nAx + By + C = 0\n\nwhere A, B, and C are constants, and A and B are not both zero.",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-11",
+    "categoryId": "geometry",
+    "front": "What are the angle relationships in parallel lines cut by a transversal?",
+    "back": "• Corresponding angles are equal\n• Alternate interior angles are equal\n• Alternate exterior angles are equal\n• Consecutive interior angles are supplementary (sum to 180°)",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-12",
+    "categoryId": "geometry",
+    "front": "What is the law of sines?",
+    "back": "In any triangle ABC with sides a, b, c (opposite to angles A, B, C respectively):\n\na/sin(A) = b/sin(B) = c/sin(C)",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-13",
+    "categoryId": "geometry",
+    "front": "What is the law of cosines?",
+    "back": "In any triangle with sides a, b, c and the angle C between sides a and b:\n\nc² = a² + b² - 2ab cos(C)\n\nThis generalizes the Pythagorean theorem to non-right triangles.",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-14",
+    "categoryId": "geometry",
+    "front": "What is the equation of a circle?",
+    "back": "Standard form: (x - h)² + (y - k)² = r²\n\nwhere (h, k) is the center and r is the radius.\n\nGeneral form: x² + y² + Dx + Ey + F = 0\nwhere D = -2h, E = -2k, and F = h² + k² - r²",
+    "isBookmarked": false
+  },
+  {
+    "id": "geo-15",
+    "categoryId": "geometry",
+    "front": "What are the properties of a parallelogram?",
+    "back": "• Opposite sides are parallel and equal\n• Opposite angles are equal\n• Consecutive angles are supplementary (sum to 180°)\n• Diagonals bisect each other\n• The sum of the squares of the diagonals equals twice the sum of the squares of two adjacent sides",
+    "isBookmarked": false
+  },
+  {
     "id": "word-1",
     "categoryId": "word-problems",
     "front": "How do you solve work problems?",
@@ -85,6 +337,90 @@
     "isBookmarked": false
   },
   {
+    "id": "word-4",
+    "categoryId": "word-problems",
+    "front": "How do you solve age problems?",
+    "back": "Use variables to represent the current ages and set up equations based on the relationships described in the problem.\n\nExample: \"John is twice as old as his sister. In 5 years, he will be 5 years more than twice her age. How old are they now?\"\n\nLet j = John's current age, s = sister's current age\nj = 2s (John is twice as old as his sister)\nj + 5 = 2(s + 5) + 5 (In 5 years...)\nSolve for j and s.",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-5",
+    "categoryId": "word-problems",
+    "front": "How do you solve money problems involving interest?",
+    "back": "Simple interest: Interest = Principal × Rate × Time\nI = PRT\nWhere P is the principal amount, R is the interest rate, and T is the time period.\n\nCompound interest: A = P(1 + r/n)^(nt)\nWhere A is the final amount, P is the principal, r is the interest rate, n is the compounding frequency, and t is the time in years.",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-6",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems involving weighted averages?",
+    "back": "Weighted average = (w₁v₁ + w₂v₂ + ... + wₙvₙ) / (w₁ + w₂ + ... + wₙ)\n\nWhere w₁, w₂, ..., wₙ are the weights and v₁, v₂, ..., vₙ are the values.\n\nExample: If a student scores 85 on a test worth 20% of the grade and 92 on a test worth 30% of the grade, the weighted average is:\n(0.20 × 85 + 0.30 × 92) / (0.20 + 0.30) = (17 + 27.6) / 0.50 = 44.6 / 0.50 = 89.2",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-7",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems involving consecutive integers?",
+    "back": "Represent consecutive integers as:\nx, x+1, x+2, ...\n\nConsecutive even integers: x, x+2, x+4, ...\n\nConsecutive odd integers: x, x+2, x+4, ...\n\nSet up an equation based on the problem conditions and solve for x.",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-8",
+    "categoryId": "word-problems",
+    "front": "How do you solve investment problems with different rates?",
+    "back": "For problems where an amount P is split into investments at different rates:\n\n1. Let x = amount invested at rate r₁\n2. Then (P - x) = amount invested at rate r₂\n3. The total interest is: xr₁ + (P - x)r₂\n4. Set up an equation based on the problem and solve for x",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-9",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems with overlapping sets?",
+    "back": "Use the formula: n(A ∪ B) = n(A) + n(B) - n(A ∩ B)\n\nWhere n(A) is the number of elements in set A, n(B) is the number of elements in set B, n(A ∩ B) is the number of elements in both sets, and n(A ∪ B) is the total number of distinct elements.",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-10",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems involving liquid mixtures or solutions?",
+    "back": "Concentration × Volume = Amount of solute\n\nInitial concentration × Initial volume = Final concentration × Final volume (for dilutions)\n\nc₁v₁ = c₂v₂",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-11",
+    "categoryId": "word-problems",
+    "front": "How do you solve profit and loss problems?",
+    "back": "Profit = Selling Price (SP) - Cost Price (CP)\nLoss = Cost Price (CP) - Selling Price (SP)\n\nProfit percentage = (Profit / CP) × 100%\nLoss percentage = (Loss / CP) × 100%\n\nSelling price = Cost price × (1 + Profit%) or Cost price × (1 - Loss%)",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-12",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems involving discounts and markups?",
+    "back": "Sale price = Original price × (1 - Discount%)\n\nOriginal price = Sale price / (1 - Discount%)\n\nMarked price = Cost price × (1 + Markup%)",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-13",
+    "categoryId": "word-problems",
+    "front": "How do you solve problems involving digit sums?",
+    "back": "For a number with digits a, b, c... (where a is the hundreds digit, b is the tens digit, c is the ones digit, etc.):\n\nThe number = 100a + 10b + c + ...\n\nThe sum of digits = a + b + c + ...",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-14",
+    "categoryId": "word-problems",
+    "front": "How do you solve work-rate problems with varying efficiencies?",
+    "back": "If person A completes 1/a of the job per hour and person B completes 1/b of the job per hour, then together they complete (1/a + 1/b) of the job per hour.\n\nIf an issue arises (like one person gets tired), adjust their rate in the equation accordingly.",
+    "isBookmarked": false
+  },
+  {
+    "id": "word-15",
+    "categoryId": "word-problems",
+    "front": "How do you solve wind and current problems?",
+    "back": "Speed downstream = boat speed + current speed\nSpeed upstream = boat speed - current speed\n\nTime = Distance / Speed\n\nSet up equations based on the given times, distances, and speeds, then solve for the unknown values.",
+    "isBookmarked": false
+  },
+  {
     "id": "ds-1",
     "categoryId": "data-sufficiency",
     "front": "What are the 5 answer choices in GMAT Data Sufficiency questions?",
@@ -103,6 +439,90 @@
     "categoryId": "data-sufficiency",
     "front": "What are common traps in Data Sufficiency questions?",
     "back": "• Assuming more than what's stated\n• Overlooking constraints or conditions\n• Focusing on getting a specific answer rather than determining sufficiency\n• Not considering all possible scenarios\n• Combining statements before analyzing each independently\n• Making computational errors in your analysis",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-4",
+    "categoryId": "data-sufficiency",
+    "front": "How do you approach Data Sufficiency questions involving inequalities?",
+    "back": "1. Identify what the question is asking (e.g., is x > y?)\n2. For each statement, determine if it gives you a definite yes or no to the question\n3. Consider all possible values that satisfy the statement(s)\n4. For sufficiency, you need a consistent answer (always yes or always no) for all possible values",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-5",
+    "categoryId": "data-sufficiency",
+    "front": "How do you approach Data Sufficiency questions with variables in the statements?",
+    "back": "1. Identify the question target and required information\n2. For each statement, check if it provides enough constraints to determine the value(s) of the target\n3. Avoid calculating an exact value unless necessary\n4. For statements with multiple variables, check if they can be reduced to a single variable or a known relationship",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-6",
+    "categoryId": "data-sufficiency",
+    "front": "How do you handle Data Sufficiency questions with 'yes/no' answers?",
+    "back": "1. Identify what the question is asking (e.g., 'Is x divisible by 4?')\n2. For each statement, determine if it always leads to the same answer (always yes or always no)\n3. If a statement allows for both yes and no answers depending on possible values, it's insufficient\n4. Remember that sufficiency means you can determine whether the answer is definitely yes or definitely no",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-7",
+    "categoryId": "data-sufficiency",
+    "front": "What's the importance of testing multiple values in Data Sufficiency?",
+    "back": "Testing multiple values helps identify whether a statement is truly sufficient by checking if different values that satisfy the statement lead to the same answer.\n\nIf you find at least two different values that satisfy the statement but lead to different answers to the target question, then the statement is insufficient.",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-8",
+    "categoryId": "data-sufficiency",
+    "front": "How do you approach geometry Data Sufficiency questions?",
+    "back": "1. Draw a diagram, but avoid making assumptions about proportions not explicitly stated\n2. List the information needed to solve the problem (e.g., for a triangle area, you need base and height or two sides and the included angle)\n3. For each statement, determine if it provides enough information to fill in the missing values\n4. Be careful with diagrams that may appear to provide information that isn't explicitly stated",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-9",
+    "categoryId": "data-sufficiency",
+    "front": "How do you approach Data Sufficiency questions with constraints like 'integer' or 'positive'?",
+    "back": "1. Identify all constraints mentioned in the question (e.g., 'x is a positive integer')\n2. For each statement, consider how these constraints interact with the given information\n3. Check if the constraints narrow down the possible values enough to determine a unique answer\n4. Remember that additional constraints in the question stem often play a crucial role in determining sufficiency",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-10",
+    "categoryId": "data-sufficiency",
+    "front": "What is the importance of the answer choice order in Data Sufficiency?",
+    "back": "The answer choices are arranged in a specific, logical order that can help with elimination strategies:\n\nA & B: Each statement alone is sufficient (with different statements being sufficient)\nC: Both statements together are sufficient, but neither alone is sufficient\nD: Each statement alone is sufficient (both statements)\nE: Insufficient information, even with both statements\n\nThis order can be used for strategic guessing if you're unsure.",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-11",
+    "categoryId": "data-sufficiency",
+    "front": "How do you approach Data Sufficiency questions with systems of equations?",
+    "back": "1. Identify how many variables are in the problem\n2. Determine how many independent equations you need to solve for all variables (generally equal to the number of variables)\n3. For each statement, count how many independent equations it provides\n4. Check if you have enough equations to solve the system\n5. Remember that redundant equations don't contribute to sufficiency",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-12",
+    "categoryId": "data-sufficiency",
+    "front": "How do you handle Data Sufficiency questions with unusual or complex units?",
+    "back": "1. Convert all quantities to the same units when comparing\n2. For rates and ratios, ensure you're comparing equivalent expressions\n3. Be careful with units that may not follow linear relationships (e.g., area vs. length)\n4. When analyzing statements, maintain consistent units throughout your work",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-13",
+    "categoryId": "data-sufficiency",
+    "front": "What is a common approach for Data Sufficiency questions involving statistics?",
+    "back": "1. Identify what statistical measure the question is asking about (mean, median, mode, range, etc.)\n2. For each measure, determine what information is required:\n   - Mean: Need sum and count, or the mean directly\n   - Median: Need values arranged in order, or enough constraints to determine middle value(s)\n   - Mode: Need frequency information\n   - Range: Need maximum and minimum values\n3. Check if each statement provides this required information",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-14",
+    "categoryId": "data-sufficiency",
+    "front": "How do you handle Data Sufficiency questions with algebraic expressions?",
+    "back": "1. Identify the target expression or value\n2. For each statement, try to rewrite or manipulate the given expressions to match the target form\n3. Check if you can isolate the target variable or expression\n4. For expressions with multiple variables, determine if you can eliminate all but the target variable",
+    "isBookmarked": false
+  },
+  {
+    "id": "ds-15",
+    "categoryId": "data-sufficiency",
+    "front": "What time management strategies are effective for Data Sufficiency questions?",
+    "back": "1. Read the question stem carefully to identify exactly what's being asked\n2. Analyze statement (1) completely before moving to statement (2)\n3. If a statement is obviously sufficient or insufficient, make a note and move on quickly\n4. Don't solve for exact values unless necessary; focus on whether you COULD solve\n5. Use process of elimination when uncertain\n6. If running out of time, remember that C and E are statistically more common answers\n7. Avoid extensive calculations; Data Sufficiency is about logical analysis",
     "isBookmarked": false
   }
 ]
