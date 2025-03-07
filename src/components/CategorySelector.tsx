@@ -22,7 +22,7 @@ const LucideIcon: React.FC<LucideIconProps> = ({ name, className }) => {
 };
 
 const CategorySelector: React.FC = () => {
-  const { categories, currentCategory, setCurrentCategory, setCurrentCardIndex, setIsFlipped } = useFlashcards();
+  const { categories, currentCategory, setCurrentCategory, setCurrentCardIndex, setIsFlipped, isDarkMode } = useFlashcards();
 
   const handleCategorySelect = (category: Category) => {
     if (currentCategory?.id === category.id) {
@@ -57,24 +57,24 @@ const CategorySelector: React.FC = () => {
                     name={category.icon} 
                     className={`h-8 w-8 ${
                       isSelected 
-                        ? "text-white" 
+                        ? (isDarkMode ? "text-white" : "text-black") 
                         : "text-primary"
                     }`} 
                   />
                   <ChevronRight className={`h-5 w-5 transform transition-transform ${
                     isSelected 
-                      ? "rotate-0 text-white" 
+                      ? `rotate-0 ${isDarkMode ? "text-white" : "text-black"}` 
                       : "-translate-x-2 text-muted-foreground group-hover:translate-x-0"
                   }`} />
                 </div>
                 
                 <div>
                   <h3 className={`font-medium text-lg mb-1 ${
-                    isSelected ? "text-white" : "text-foreground"
+                    isSelected ? (isDarkMode ? "text-white" : "text-black") : "text-foreground"
                   }`}>{category.name}</h3>
                   <p className={`text-sm line-clamp-2 ${
                     isSelected 
-                      ? "text-white/80" 
+                      ? (isDarkMode ? "text-white/80" : "text-black/80") 
                       : "text-muted-foreground"
                   }`}>
                     {category.description}
