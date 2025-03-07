@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "../components/Navbar";
 import CategorySelector from "../components/CategorySelector";
@@ -6,6 +7,7 @@ import FlashcardControls from "../components/FlashcardControls";
 import ProgressBar from "../components/ProgressBar";
 import CardCountSelector from "../components/CardCountSelector";
 import { FlashcardProvider, useFlashcards } from "../context/FlashcardContext";
+import { Mail } from "lucide-react";
 
 const FlashcardSection: React.FC = () => {
   const { 
@@ -56,6 +58,15 @@ const Index: React.FC = () => {
             <p className="text-sm text-muted-foreground">
               GMAT Flashcard App — Study smarter, not harder
             </p>
+            <div className="flex items-center justify-center gap-2 mt-2">
+              <Mail className="h-4 w-4 text-muted-foreground" />
+              <a 
+                href="mailto:nirajkumar4598@gmail.com" 
+                className="text-sm text-primary hover:underline transition-all"
+              >
+                nirajkumar4598@gmail.com
+              </a>
+            </div>
           </div>
         </footer>
       </div>
