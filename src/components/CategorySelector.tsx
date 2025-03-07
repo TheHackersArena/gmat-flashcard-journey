@@ -63,7 +63,7 @@ const CategorySelector: React.FC = () => {
                   />
                   <ChevronRight className={`h-5 w-5 transform transition-transform ${
                     isSelected 
-                      ? "translate-x-0 text-white" 
+                      ? "rotate-0 text-white" 
                       : "-translate-x-2 text-muted-foreground group-hover:translate-x-0"
                   }`} />
                 </div>

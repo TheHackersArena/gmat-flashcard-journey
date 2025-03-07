@@ -37,7 +37,7 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
   const [selectedCardCount, setSelectedCardCount] = useState(10);
   const [hasStartedReview, setHasStartedReview] = useState(false);
 
@@ -120,6 +120,12 @@ export const FlashcardProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  // Initialize dark mode on first load
+  useEffect(() => {
+    // Initialize dark mode by default
+    document.documentElement.classList.add('dark');
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
